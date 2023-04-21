@@ -1,0 +1,33 @@
+package secureMessageTransfer
+
+interface Server {
+    version {major 1 minor 0}
+    
+    method exchangeKey {
+        in
+        {
+            String clientKey
+        }
+        out
+        {
+            String serverKey
+        }
+    }
+
+    method sendMessage {
+        in
+        {
+            String nonce
+
+            String cipherText
+
+            UInt32 messageLength
+        }
+        out
+        {
+            String nonceServer
+
+            String cipherTextServer
+        }
+    }
+}

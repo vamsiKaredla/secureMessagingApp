@@ -1,0 +1,21 @@
+import "platform:/plugin/org.genivi.commonapi.someip/deployment/CommonAPI-SOMEIP_deployment_spec.fdepl"
+import "server.fidl"
+
+define org.genivi.commonapi.someip.deployment for interface secureMessageTransfer.Server {
+    SomeIpServiceID = 6998
+
+    method exchangeKey {
+        SomeIpMethodID = 99
+    }
+
+    method sendMessage {
+        SomeIpMethodID = 100
+    }
+}
+
+define org.genivi.commonapi.someip.deployment for provider as Server {
+    instance secureMessageTransfer.Server {
+        InstanceId = "test"
+        SomeIpInstanceID = 22136
+    }
+}

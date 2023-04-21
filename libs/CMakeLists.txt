@@ -1,0 +1,6 @@
+add_subdirectory(vsomeip)
+add_subdirectory(capicxx-core-runtime)
+add_subdirectory(capicxx-someip-runtime)
+add_subdirectory(libsodium)
+add_subdirectory(cryptoHandler)
+add_subdirectory(log4cplus)
